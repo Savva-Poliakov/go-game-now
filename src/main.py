@@ -1,7 +1,15 @@
 import sys
+import os
 import pygame
 from go_rules import GoBoard
 from ai import GoEngine, list_levels
+
+
+def resource_path(relative_path):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.dirname(__file__), '..', relative_path)
+
 
 WOOD_COLOR = (220, 179, 92)
 LINE_COLOR = (40, 30, 10)
@@ -12,8 +20,8 @@ BUTTON_COLOR = (180, 140, 70)
 BUTTON_HOVER = (200, 160, 90)
 MARGIN = 40
 WINDOW_SIZE = 640
-ICON_PATH = "../assets/logo.ico"
-MUSIC_PATH = "../assets/bgm.mp3"
+ICON_PATH = resource_path("assets/logo.ico")
+MUSIC_PATH = resource_path("assets/bgm.mp3")
 MUSIC_VOLUME = 0.35
 
 STAR_POINTS = {
