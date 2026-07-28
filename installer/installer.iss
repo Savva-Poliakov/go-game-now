@@ -27,8 +27,6 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "..\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\assets\logo.ico"; DestDir: "{app}\assets"; Flags: ignoreversion
-Source: "..\assets\bgm.mp3"; DestDir: "{app}\assets"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\Go Game Now"; Filename: "{app}\{#MyAppExeName}"
