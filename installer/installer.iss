@@ -2,7 +2,7 @@
 #define MyAppVersion "0.1.0"
 #define MyAppPublisher "Savva Poliakov"
 #define MyAppExeName "GGN.exe"
-#define MyAppId "{{A1E5C9F0-4B2D-4B3E-9C7A-GGN000000001}"
+#define MyAppId "{{8D879A98-34CA-42FD-B03C-DEA843941C20}"
 #define MyRegistryKey "Software\GGN"
 #define MyDataDir "{userappdata}\GGN"
 
