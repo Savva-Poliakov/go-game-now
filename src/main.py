@@ -12,6 +12,9 @@ BUTTON_COLOR = (180, 140, 70)
 BUTTON_HOVER = (200, 160, 90)
 MARGIN = 40
 WINDOW_SIZE = 640
+ICON_PATH = "../assets/logo.ico"
+MUSIC_PATH = "../assets/bgm.mp3"
+MUSIC_VOLUME = 0.35
 
 STAR_POINTS = {
     9: [(2, 2), (2, 6), (6, 2), (6, 6), (4, 4)],
@@ -173,6 +176,18 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
     pygame.display.set_caption("Go Game Now")
+    try:
+        icon = pygame.image.load(ICON_PATH)
+        pygame.display.set_icon(icon)
+    except pygame.error:
+        pass
+    try:
+        pygame.mixer.init()
+        pygame.mixer.music.load(MUSIC_PATH)
+        pygame.mixer.music.set_volume(MUSIC_VOLUME)
+        pygame.mixer.music.play(-1)
+    except pygame.error:
+        pass
     font = pygame.font.SysFont("arial", 20)
     while True:
         board_size = selection_screen(screen, font, "Select board size", [9, 13, 19])
